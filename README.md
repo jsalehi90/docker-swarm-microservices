@@ -73,8 +73,3 @@ docker service logs -f my-app_web
 - `/nginx`: Nginx configuration files.
 - `docker-compose.yml`: The blueprint for services, networks, and configs.
 - `README.md`: Documentation.
-
-```
-
-```
-
