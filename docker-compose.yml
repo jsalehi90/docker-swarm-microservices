@@ -1,0 +1,34 @@
+services:
+  web:
+    image: my-flask-app:latest
+    deploy:
+      replicas: 3
+    environment:
+      - REDIS_HOST=redis
+    networks:
+      - final_net
+
+  redis:
+    image: redis:alpine
+    networks:
+      - final_net
+
+  nginx:
+    image: nginx:alpine
+    ports:
+      - "80:80"
+    configs:
+      - source: nginx_v1
+        target: /etc/nginx/nginx.conf
+    depends_on:
+      - web
+    networks:
+      - final_net
+
+networks:
+  final_net:
+    driver: overlay
+
+configs:
+  nginx_v1:
+    file: ./nginx/nginx.conf
