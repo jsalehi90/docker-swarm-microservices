@@ -1,4 +1,3 @@
-````markdown
 # Scalable Microservices Architecture with Docker Swarm 🚀
 
 A production-ready microservices demonstration utilizing **Flask**, **Redis**, and **Nginx** orchestrated by **Docker Swarm**. This project showcases modern DevOps practices including load balancing, configuration management, and service scaling.
@@ -37,7 +36,6 @@ The Nginx container acts as a gateway, proxying requests to the Flask service. D
    ```bash
    docker swarm init
    ```
-````
 
 2. **Build the Flask Application:**
 
