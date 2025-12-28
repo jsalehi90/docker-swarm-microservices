@@ -39,33 +39,30 @@ The Nginx container acts as a gateway, proxying requests to the Flask service. D
 
 2. **Build the Flask Application:**
 
-```bash
-docker build -t my-flask-app:latest ./flask-app
-
-```
+   ```bash
+   docker build -t my-flask-app:latest ./flask-app
+   ```
 
 3. **Deploy the Stack:**
 
-```bash
-docker stack deploy -c docker-compose.yml my-app
-
-```
+   ```bash
+   docker stack deploy -c docker-compose.yml my-app
+   ```
 
 4. **Verify the Services:**
 
-```bash
-docker service ls
-
-```
+   ```bash
+   docker service ls
+   ```
 
 ## 🔍 Troubleshooting & Logs
 
 To monitor live traffic and debug backend services:
 
-```bash
-docker service logs -f my-app_web
+   ```bash
+   docker service logs -f my-app_web
 
-```
+   ```
 
 ## 📁 Project Structure
 
