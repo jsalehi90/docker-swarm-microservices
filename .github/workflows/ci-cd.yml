@@ -18,11 +18,11 @@ jobs:
 
       - name: Build Images
         run: |
-          docker-compose build
+          docker compose build
 
       - name: Run Tests (Simple)
         run: |
-          docker-compose up -d
+          docker compose up -d
           sleep 10
           curl localhost:80 | grep "Hello"
-          docker-compose down
+          docker compose down
