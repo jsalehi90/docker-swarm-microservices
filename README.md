@@ -34,7 +34,7 @@ The Nginx container acts as a gateway, proxying requests to the Flask service. D
 
 1. **Initialize Docker Swarm** (if not already active):
    ```bash
-   docker swarm init
+   docker swarm init --advertise-addr $(hostname -I | awk '{print $1}')
    ```
 
 2. **Build the Flask Application:**
